@@ -1,9 +1,45 @@
 <?php
 
 class personne {
-    public $nom;
-    public $prenom;
-    public $age;
+
+    private $nom;
+
+    private $prenom;
+
+    private $age;
+
+    //ajout des seters
+
+    public function getNom()
+    {
+        return $this->nom;
+    }
+    
+    public function setNom($nom)
+    {
+        $this->nom = $nom;
+    }
+
+    public function getPrenom()
+    {
+        return $this->prenom;
+    }
+
+    public function setPrenom($prenom)  
+    {
+        $this->prenom = $prenom;
+    }
+
+    public function getAge()
+    {
+        return $this->age;
+    }  
+
+    public function setAge($age) 
+    {
+        $this->age = $age;
+    }
+
 
     public function parler()
     {
@@ -23,9 +59,8 @@ class personne {
 
 
 $personne = new personne();
-$personne->nom = "Konan";
-$personne->prenom = "Jean";
-$personne->age = 25;
-echo   $personne->parler();
+$personne->setNom =('Konan') ;
+$personne->setPrenom = ('Jean');
+$personne->setAge = (25);
 
-var_dump($personne);
+echo $personne->getAge();
